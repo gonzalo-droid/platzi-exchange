@@ -1,0 +1,6 @@
+
+
+
+npm i -S vue-router
+
+    isntallr vue-router
