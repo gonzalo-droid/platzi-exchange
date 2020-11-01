@@ -4,13 +4,13 @@ import Router from "vue-router";
 import Home from "@/views/Home";
 import Error from "@/views/Error";
 import About from "@/views/About";
+import CoinDetail from "@/views/CoinDetail";
 
-Vue.use(Router); // vue usa los rutas progresivamente
+Vue.use(Router);
 
 export default new Router({
-  mode: "history", // history mode de html
+  mode: "history",
 
-  // cada ruta es un objeto
   routes: [
     {
       path: "/",
@@ -25,7 +25,13 @@ export default new Router({
     },
 
     {
-      path: "*", // en caso url no exista
+      path: "/coin/:id", //parametter dinamyc
+      name: "coin-detail",
+      component: CoinDetail
+    },
+
+    {
+      path: "*",
       name: "error",
       component: Error
     }
